@@ -115,7 +115,7 @@ footer {
 .product {
     grid-area: product;
     height: 80vh;
-    background-image: url('/images/jakob-owens-CiUR8zISX60-unsplash.jpg');
+    background-image: url('images/jakob-owens-CiUR8zISX60-unsplash.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top 65% left 65%;
