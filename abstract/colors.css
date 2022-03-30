@@ -1,0 +1,19 @@
+:root {
+    --clr-drk-primary: #130c2b;
+    --clr-drk-secondary: #334c77;
+    --clr-drk-tertiary: #654CCB;
+
+    --clr-drk-panel1: rgba(195, 0, 82, .19);
+    --clr-drk-panel2: rgba(105, 75, 227, 0.141);
+
+    --clr-drk-btn-grey: rgba(61, 85, 75, 1);
+    --clr-drk-btn-greydark: rgba(50, 71, 62, 1); 
+    --clr-drk-btn-accent: rgba(227, 89, 103, 1);
+    --clr-drk-btn-accentdark: rgba(192, 67, 80, 0.9);
+    --clr-drk-indicator: rgba(174, 185, 181, .7);
+
+    --clr-drk-ff-white: #f2f2f2;
+    --clr-drk-ff-whitedark: #aeb8b4;
+    --clr-drk-ff-black: #222018;
+    
+}

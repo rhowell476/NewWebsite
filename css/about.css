@@ -1,0 +1,76 @@
+.about {
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: 8% 1fr 8%;
+    grid-template-areas:
+        "header header header"
+        ". about ."
+        "footer footer footer"
+}
+
+.pic_main {
+    grid-area: about;
+    width: 100%;
+    height: 150vh;
+    position: relative;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.bars {
+    width: 100%;
+    height: 5%;
+    background-color: #6E0564;
+}
+
+.bars_end {
+    width: 5%;
+    height: 5%;
+    background-color: #6E0564;
+    border-radius: 50%;
+}
+
+#bar1 {
+    position: absolute;
+    top: 3%;
+    left: 0;
+}
+
+#bar1_start {
+    position: absolute;
+    top: 3%;
+    left: -2.5%;
+}
+
+#bar1_end {
+    position: absolute;
+    top: 3%;
+    border-radius: 50%;
+    right: -2.5%;
+}
+
+#bar2 {
+    width: 75%;
+    position: absolute;
+    top: 11%;
+    left: 12.5%;
+}
+
+#bar2_start {
+    position: absolute;
+    top: 11%;
+    left: 10%;
+    background-color: #6E0564;
+}
+
+#bar2_end {
+    position: absolute;
+    top: 11%;
+    right: 10%;
+    background-color: #6E0564;
+}
+
+#pic_main_content {
+    max-height: 50vh;
+}

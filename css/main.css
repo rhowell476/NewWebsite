@@ -1,0 +1,352 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--clr-drk-primary);
+    margin: 0;
+    color: var(--clr-drk-ff-white);
+}
+
+.home {
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "header header"
+        "product product"
+        "pic1 pic1"
+        "pic1-descrip pic1-descrip"
+        "pic2 pic2"
+        "contact contact"
+        "slides slides"
+        "footer footer";
+}
+
+@media (min-width: 600px) {
+    .home {
+        grid-template-columns: 8% 1fr 1fr 8%;
+    /* grid-template-rows: 20vh 80vh 65vh 65vh 75vh 12vh 15vh; */
+        grid-template-areas:
+            "header header header header"
+            "product product product product"
+            "... pic1 pic1-descrip ..."
+            "... pic2 pic2 ..."
+            "contact contact contact contact"
+            "... slides slides ..."
+            "footer footer footer footer";
+    }
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70vw;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper li {
+    cursor: pointer;
+}
+
+li:hover {
+    color: var(--clr-drk-primary)
+}
+
+.btn {
+    border: none;
+    margin: .5rem;
+    padding: 1.2rem;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.btn--primary {
+    background-color: var(--clr-drk-btn-accent);
+    color: var(--clr-drk-ff-black);
+    font-size: 26px;
+}
+
+.btn--primary:hover {
+    background-color: var(--clr-drk-btn-accentdark)
+}
+
+.btn--secondary {
+    background-color: var(--clr-drk-btn-grey);
+    color: var(--clr-drk-ff-whitedark);
+}
+
+.btn--secondary:hover {
+    background-color: var(--clr-drk-btn-greydark);
+}
+
+header, footer {
+    background-color: var(--clr-drk-secondary);
+    height: 100%;
+}
+
+header {
+    grid-area: header;
+    height: 20vh;
+}
+
+footer {
+    grid-area: footer;
+    height: 15vh;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.product {
+    grid-area: product;
+    height: 80vh;
+    background-image: url('/images/jakob-owens-CiUR8zISX60-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top 65% left 65%;
+    margin-bottom: 2em;
+}
+
+.main {
+    width: 30%;
+    height: 70%;
+    margin: 5em 10%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.pic1 {
+    grid-area: pic1;
+    padding-inline: 2em;
+    margin: 2em auto;
+    max-width: 65vh;
+    display: grid;
+    align-items: center;
+}
+
+#pic1_RED {
+    height: auto;
+    width: 100%;
+}
+
+.pic1-descrip {
+    grid-area: pic1-descrip;
+    margin-inline: 2em;
+    background-color: var(--clr-drk-panel1);
+    padding: 2em;
+}
+
+@media (min-width: 600px) {
+    .pic1 {
+        margin: 0 auto;
+        padding-inline: 0;
+    }
+    .pic1-descrip {margin: 10%;}
+}
+
+.pic2 {
+    grid-area: pic2;
+    margin: 2em auto;
+    height: 100%;
+    max-width: 95vh;
+    text-align: center;
+    padding: 2em;
+}
+
+#pic2_sony {
+    width: 100%;
+    height: auto;
+}
+
+.pic2 h3 {
+    margin-top: 1em;
+}
+
+@media (min-width: 600px) {
+    .pic2 {
+        padding: 0
+    }
+    .pic2 h3 {margin: .5%;}
+}
+
+.slides { 
+    grid-area: slides;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em auto;
+    background-color: var(--clr-drk-panel2);
+    padding-block: 1em;
+    max-width: 55em;
+}
+
+.slideshow {
+    position: relative;
+    height: 80vh;
+    width: auto;
+}
+
+.slideshow__page-container {
+    height: 100%;
+    max-width: 40em;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.slideshow__page-container ul {
+    position: relative;
+    height: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.slideshow__slides {
+    position: relative;
+    height: 100%;
+    transition: transform 200ms ease-in;
+}
+
+.slideshow__slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slideshow__button {
+    color: var(--clr-drk-ff-whitedark);
+    background-color: transparent;
+    border: none;
+    height: 100%;
+}
+
+.slideshow__button:hover {
+    color: var(--clr-drk-secondary);
+}
+
+.slideshow__btn--right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+}
+
+.slideshow__btn--left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+
+.slideshow__indicator {
+    border: 0;
+    border-radius: 25%;
+    width: .1em;
+    height: 1em;
+    background-color: var(--clr-drk-indicator);
+    margin: .5em .5em;
+    cursor: pointer;
+}
+
+.slideshow img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top 75% left 50%;
+}
+
+.slideshow__indicator.current-slide {
+    background: var(--clr-drk-secondary);
+}
+
+.is-hidden {display: none; }
+
+.slides h3 {
+    margin: .5em;
+}
+
+.slides p {
+    width: 80%;
+    margin: 1em auto;
+}
+
+@media (min-width: 600px) {
+    .slides p{
+        max-width: 55%;
+        margin-top: 1em;
+        margin-bottom: 2em;
+    }
+}
+
+@media (min-width: 600px) {
+    .slides p{
+        margin: 0;
+    }
+}
+
+.contact {
+    grid-area: contact;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-around;
+    padding: 3%;
+    width: 100%;
+    background-color: var(--clr-drk-tertiary);
+}
+
+@media (min-width: 600px) {
+    .contact {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto 0;
+    }
+}
+
+.contact__company {
+    width: 40%;
+    margin: 2em auto;
+}
+
+.contact .wrapper {
+    height: 100%;
+    margin: 0 auto;
+}
+
+.contact .btn {
+    color: var(--clr-drk-ff-white);
+    text-align: center;
+    padding: .8em;
+    font-size: 1em;
+    
+}
+
+@media (min-width: 600px) {
+    .contact__company {
+        margin: 0;
+    }
+    .contact .wrapper {
+        margin: 0;
+    }
+    .contact .btn {
+        padding: 1.2em;
+    }
+}
