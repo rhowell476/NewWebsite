@@ -12,7 +12,7 @@ body {
     grid-auto-rows: auto;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
-        "header header"
+        "wrapper wrapper"
         "product product"
         "pic1 pic1"
         "pic1-descrip pic1-descrip"
@@ -25,9 +25,8 @@ body {
 @media (min-width: 600px) {
     .home {
         grid-template-columns: 8% 1fr 1fr 8%;
-    /* grid-template-rows: 20vh 80vh 65vh 65vh 75vh 12vh 15vh; */
         grid-template-areas:
-            "header header header header"
+            "wrapper wrapper wrapper wrapper"
             "product product product product"
             "... pic1 pic1-descrip ..."
             "... pic2 pic2 ..."
@@ -39,25 +38,42 @@ body {
 
 ul {
     list-style: none;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 70vw;
-    height: 100%;
-    margin: 0 auto;
-    padding: 0;
+    margin: 0;
+    background-color: salmon;
 }
 
 li {
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    
+    background-color: blue;
 }
 
-.wrapper li {
+.wrapper {
+    background-color: yellow;
+    grid-area: wrapper;
+    
+}
+.wrapper ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper li a {
     cursor: pointer;
+    background-color: green;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.wrapper a {
 }
 
 li:hover {
@@ -93,12 +109,11 @@ li:hover {
 
 header, footer {
     background-color: var(--clr-drk-secondary);
-    height: 100%;
 }
 
 header {
-    grid-area: header;
-    height: 20vh;
+    height: 75px;
+    background-color: green;
 }
 
 footer {
@@ -106,11 +121,7 @@ footer {
     height: 15vh;
 }
 
-.wrapper {
-    display: flex;
-    align-items: center;
-    height: 100%;
-}
+
 
 .product {
     grid-area: product;
