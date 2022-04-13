@@ -12,7 +12,7 @@ body {
     grid-auto-rows: auto;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
-        "wrapper wrapper"
+        "header header"
         "product product"
         "pic1 pic1"
         "pic1-descrip pic1-descrip"
@@ -26,7 +26,7 @@ body {
     .home {
         grid-template-columns: 8% 1fr 1fr 8%;
         grid-template-areas:
-            "wrapper wrapper wrapper wrapper"
+            "header header header header"
             "product product product product"
             "... pic1 pic1-descrip ..."
             "... pic2 pic2 ..."
@@ -39,19 +39,15 @@ body {
 ul {
     list-style: none;
     margin: 0;
-    background-color: salmon;
 }
 
 li {
     width: 100%;
     height: 100%;
-    
-    background-color: blue;
 }
 
 .wrapper {
-    background-color: yellow;
-    grid-area: wrapper;
+    grid-area: header;
     
 }
 .wrapper ul {
@@ -64,7 +60,6 @@ li {
 
 .wrapper li a {
     cursor: pointer;
-    background-color: green;
     height: 100%;
     width: 100%;
     display: flex;
@@ -113,7 +108,6 @@ header, footer {
 
 header {
     height: 75px;
-    background-color: green;
 }
 
 footer {
@@ -210,7 +204,7 @@ footer {
 .slideshow {
     position: relative;
     height: 80vh;
-    width: auto;
+    width: 100%;
 }
 
 .slideshow__page-container {
